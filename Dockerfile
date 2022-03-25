@@ -14,4 +14,5 @@ RUN npm run build
 FROM nginx
 EXPOSE 80
 
+USER node
 COPY --chown=node:node --from=builder /home/node/app/build /usr/share/nginx/html
